@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Identifier Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">Back to top</a>
+    </header>
+    <div class="container">
+        <h1>Unique Identifier Generator</h1>
+        
+        <div class="form-group">
+            <label for="letters">Letters to use:</label>
+            <div class="checkbox-container" id="letter-options">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="uppercase" name="letters" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked>
+                    <label for="uppercase">Uppercase (A-Z)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lowercase" name="letters" value="abcdefghijklmnopqrstuvwxyz">
+                    <label for="lowercase">Lowercase (a-z)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="numbers" name="letters" value="0123456789" checked>
+                    <label for="numbers">Numbers (0-9)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="special" name="letters" value="!@#$%^&*()-_=+[]{}|;:,.<>?">
+                    <label for="special">Special Characters</label>
+                </div>
+            </div>
+            <div class="custom-letters">
+                <label for="custom">Custom characters:</label>
+                <input type="text" id="custom" name="custom" placeholder="Add your own characters">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="length">Number of digits:</label>
+            <input type="number" id="length" name="length" min="1" max="100" value="8">
+        </div>
+        
+        <div class="form-group">
+            <label for="count">Number of IDs to generate:</label>
+            <input type="number" id="count" name="count" min="1" max="1000" value="10">
+        </div>
+        
+        <div class="form-group">
+            <label for="exceptions">Exceptions (IDs to exclude, one per line):</label>
+            <textarea id="exceptions" name="exceptions" rows="4" placeholder="Enter IDs to exclude, one per line"></textarea>
+        </div>
+        
+        <button id="generate-btn">Generate IDs</button>
+        
+        <div class="result-container">
+            <h2>Generated IDs:</h2>
+            <div class="copy-btn-container">
+                <button id="copy-btn">Copy All</button>
+            </div>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
